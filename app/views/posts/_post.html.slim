@@ -1,0 +1,14 @@
+.post.list-group-item.list-group-item-action.flex-column.align-items-start
+  .justify-content-between
+    h5 class="mb-1"
+      = link_to "#{post.title}", post
+    small
+      = link_to "Edit", edit_post_path(post), class: "action-link"
+      = link_to "Delete", post, method: :delete, data: { confirm: "Are you sure?" }, class: "action-link"
+  .content-block
+    p class="mb-2"
+      = post.content
+    p class="mb-1"
+      = post.assigned_categories
+    small
+      span Rating: #{post.rating}

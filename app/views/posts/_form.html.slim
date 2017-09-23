@@ -1,0 +1,12 @@
+= simple_form_for(post.to_model) do |f|
+  = f.error_notification
+
+  = f.input :title, required: true
+
+  = f.input :content, as: :text, required: true
+
+  = f.input :rating, as: :integer
+
+  = f.input :categories, collection: Post::CATEGORIES, as: :check_boxes, include_hidden: false
+
+  = f.button :submit

@@ -1,0 +1,6 @@
+.filter-form
+  = simple_form_for :filter, url: posts_path, method: :get  do |f|
+    = f.input :rating_filtration_value, as: :integer, input_html: { min: 0, max: 5 }
+    = f.input :categories, collection: Post::CATEGORIES, as: :check_boxes, include_hidden: false
+    = f.input :rating_sort_direction, collection: %w[desc asc], include_blank: false
+    = f.button :submit, "Apply"

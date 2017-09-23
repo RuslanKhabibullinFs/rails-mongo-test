@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.block {
+  margin-top: 8%;
+
+  .action-link {
+    margin-right: 10px;
+  }
+
+  .content-block {
+    margin-top: 15px;
+  }
+
+  .post {
+    margin: 15px 0px;
+  }
+
+  .filter-form {
+    margin-top: 35px;
+    width: 85%;
+  }
+}

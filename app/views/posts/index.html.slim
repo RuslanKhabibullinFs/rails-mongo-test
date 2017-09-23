@@ -1,0 +1,8 @@
+.row
+  .col-md-3.block
+    = render "posts/filter_form"
+  .col-md-9.block
+    h1 Posts
+    = link_to "Add new post", new_post_path
+    .list-group
+      = render posts
